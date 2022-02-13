@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #f5deb3;
+  transition: all .3s;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom left,
+    rgba(80, 255, 240, 0.671),
+    rgba(189, 49, 96, 0.808)
+  );
+  outline: 0px solid slategrey;
+  border-radius: 4px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 28px rgba(0, 0, 0, 0.404);
+  width: 666px;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 29px;
+  --c: #08d1ff; /* color */
+  --ot: 20px; /* outer border thickness */
+  --ol: 8px; /* outer border length */
+  --it: 20px; /* inner border thickness */
+  --il: 15px; /* inner border length */
+  --g: 3px; /* the gap*/
+  --b: 15px; /* the inside border*/
+
+  --l: linear-gradient(var(--c) 0 0);
+  display: inline-block;
+  padding: var(--ot);
+  background: var(--l) 0 0, var(--l) 0 0, var(--l) 100% 0, var(--l) 100% 0,
+    var(--l) 0 100%, var(--l) 0 100%, var(--l) 100% 100%, var(--l) 100% 100%;
+  background-size: var(--ot) var(--ol), var(--ol) var(--ot);
+  background-repeat: no-repeat;
+}
+.form input {
+  text-align: center;
+  margin: 8px;
+  padding: 14px;
+  font-family: Georgia, serif;
+  font-size: 33px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  background-color: bisque;
+  color: rgb(117, 61, 61);
+  box-shadow: 0px 0px 28px rgba(79, 81, 82, 0.37);
+}
+.form input::placeholder {
+  text-align: center;
+  color: rgb(40, 3, 61);
+}
+.form input:focus {
+  outline: 0px;
+}
+.search {
+  flex: 1;
+  max-width: 440px;
+  border: calc(var(--g) + var(--it)) solid transparent;
+  background: inherit;
+  background-origin: border-box;
+  background-size: var(--it) var(--il), var(--il) var(--it);
+  box-shadow: 0 0 0 var(--b) var(--c) inset;
+}
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  padding: 12px;
+  background-color: rgb(195, 238, 235);
+  border: 9px solid rgba(53, 21, 21, 0.685);
+  border-radius: 50% 20% / 10% 40%;
+  min-width: 450px;
+  color: brown;
+  font-size: larger;
+  font-weight: 500;
+  font-family: Georgia, serif;
+}
+.highLights {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(145, 144, 144);
+  }
+}
